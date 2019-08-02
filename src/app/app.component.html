@@ -1,20 +1,39 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+<ng2-slim-loading-bar [ngClass]="{ 'top': pageSettings.pageEmpty }"></ng2-slim-loading-bar>
 
+<!-- begin #page-container -->
+<div id="page-container" class="page-container fade page-sidebar-fixed page-header-fixed show" [ngClass]="{
+    'has-scroll' : pageHasScroll,
+    'page-sidebar-minified': pageSettings.pageSidebarMinified,
+    'page-with-footer': pageSettings.pageWithFooter,
+    'page-content-full-height': pageSettings.pageContentFullHeight,
+    'page-without-sidebar': pageSettings.pageWithoutSidebar,
+    'page-with-right-sidebar': pageSettings.pageSidebarRight,
+    'page-with-two-sidebar': pageSettings.pageSidebarTwo,
+    'page-with-wide-sidebar': pageSettings.pageSidebarWide,
+    'page-right-sidebar-collapsed': pageSettings.pageSidebarRightCollapsed,
+    'page-with-light-sidebar': pageSettings.pageSidebarLight,
+    'page-with-top-menu': pageSettings.pageTopMenu,
+    'page-sidebar-toggled': pageSettings.pageMobileSidebarToggled,
+    'page-right-sidebar-toggled': pageSettings.pageMobileRightSidebarToggled,
+    'p-0': pageSettings.pageEmpty
+  }">
+
+  <top-menu *ngIf="pageSettings.pageTopMenu && !pageSettings.pageEmpty"></top-menu>
+
+  <header (toggleSidebarRightCollapsed)="onToggleSidebarRight($event)" (toggleMobileSidebar)="onToggleMobileSidebar($event)" (toggleMobileRightSidebar)="onToggleMobileRightSidebar($event)" [pageSidebarTwo]="pageSettings.pageSidebarTwo" *ngIf="!pageSettings.pageEmpty"></header>
+
+  <sidebar (toggleSidebarMinified)="onToggleSidebarMinified($event)" (hideMobileSidebar)="onHideMobileSidebar($event)" *ngIf="!pageSettings.pageWithoutSidebar && !pageSettings.pageEmpty" [pageSidebarTransparent]="pageSettings.pageSidebarTransparent" [pageSidebarMinified]="pageSettings.pageSidebarMinified"></sidebar>
+
+  <sidebar-right (hideMobileRightSidebar)="onHideMobileRightSidebar($event)" *ngIf="pageSettings.pageSidebarTwo && !pageSettings.pageEmpty"></sidebar-right>
+
+  <div id="content" class="content" [ngClass]="{
+    'content-full-width': pageSettings.pageContentFullWidth,
+    'content-inverse-mode': pageSettings.pageContentInverseMode,
+    'p-0 m-0': pageSettings.pageEmpty
+  }">
+    <router-outlet></router-outlet>
+  </div>
+
+  <footer *ngIf="pageSettings.pageWithFooter"></footer>
+</div>
+<!-- end #page-container -->
