@@ -1,0 +1,42 @@
+﻿{
+  "appName": "Trámites",
+  "mock": false,
+  "apiBaseUrl": "http://localhost:8000/",
+  "apiVersionName": "api/v1",
+  "clientBaseUrl": "http://127.0.0.1:4700",
+  "lenguaje": "es-EC",
+
+  "urlEndPoints": {
+    "authLogin": "account/login",
+    "authLogout": "account/logout",
+    "authLogout": "account/register",
+    "authRefreshToken": "account/refreshToken",
+    "authPasswordRestore": "account/recuperar-credenciales",
+    "catalogo": "catalogo",
+    "tipoCatalogo": "tipocatalogo",
+    "persona": "person",
+    "corresponsal": "corresponsal",
+    "empresa": "empresa",
+    "dashboard": "dashboard",
+    "dispositivo": "dispositivo",
+    "fileManager": "filemanager",
+    "menus": "menu",
+    "office": "oficina",
+    "position": "cargo",
+    "roles": "role",
+    "usuario": "account",
+    "areaTrabajo": "areaTrabajo",
+    "supervisor": "supervisor",
+    "log": "log",
+    "limiteExistencia": "limiteExistencia",
+    "limiteTransaccional": "limiteTransaccional"
+  },
+  "catalogTypes": {
+    "Identificacion": 1,
+    "TipoDispositivo": 2,
+    "Operacion": 4
+  },
+  "serverResources": {
+  },
+  "secretKey": "!A%D*G-KaPdSgVkY"
+}

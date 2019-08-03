@@ -10,7 +10,7 @@ import * as global 			 from '../../config/globals';
 })
 
 export class TopMenuComponent implements AfterViewInit {
-  @ViewChild('topMenuContainer') topMenuContainer;
+  @ViewChild('topMenuContainer', {static: false}) topMenuContainer;
 
   menus = pageMenus;
   navControlLeft = false;
@@ -18,7 +18,7 @@ export class TopMenuComponent implements AfterViewInit {
   navWidth = 0;
   navMarginLeft = 0;
   navMarginRight = 0;
-  pageSettings = pageSettings
+  pageSettings = pageSettings;
 
   controlLeft() {
     var widthLeft = this.navMarginLeft;
@@ -102,11 +102,11 @@ export class TopMenuComponent implements AfterViewInit {
     });
   }
 
-	expandCollapseSubmenu(currentMenu, allMenu, active) {
-		if (currentMenu.state == 'expand' || (active.isActive && !currentMenu.state)) {
-			currentMenu.state = 'collapse';
-		} else {
-			currentMenu.state = 'expand';
-		}
-	}
+  expandCollapseSubmenu(currentMenu, allMenu, active) {
+    if (currentMenu.state === 'expand' || (active.isActive && !currentMenu.state)) {
+      currentMenu.state = 'collapse';
+    } else {
+      currentMenu.state = 'expand';
+    }
+  }
 }

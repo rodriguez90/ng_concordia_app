@@ -1,11 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
-@import 'https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700';
-@import 'https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css';
-@import 'https://use.fontawesome.com/releases/v5.7.0/css/all.css';
-@import '../../assets/css/default/style.min.css';
-@import '../../assets/css/default/style-responsive.min.css';
-@import '../../assets/css/default/theme/default.css';
-@import 'https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.6.1/fullcalendar.min.css';
+/*@import 'https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700';*/
+/*@import 'assets/plugins/font/opensan.css?family=Open+Sans:300,400,600,700';*/
+/*@import 'https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css';*/
+@import 'assets/plugins/bootstrap/css/bootstrap.min.css';
+/*@import 'https://use.fontawesome.com/releases/v5.7.0/css/all.css';*/
+@import 'assets/plugins/font-awesome/css/all.min.css';
+@import 'assets/css/default/style.min.css';
+@import 'assets/css/default/style-responsive.min.css';
+@import 'assets/css/default/theme/default.css';
+/*@import 'https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.6.1/fullcalendar.min.css';*/
+
+@import 'assets/scss/variable.scss';
 
 .overflow-scroll {
   overflow: scroll;

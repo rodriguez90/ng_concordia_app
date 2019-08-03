@@ -1,41 +1,26 @@
 var pageMenus = [{
   'icon': 'fa fa-th-large',
-  'title': 'Home',
+  'title': 'Inicio',
   'url': '/home'
-},{
-  'icon': 'fa fa-align-left',
-  'title': 'Menu Level',
-  'url': '',
-  'caret': 'true',
-  'submenu': [{
+  },
+  {
+    'icon': 'fa fa-align-left',
+    'title': 'Administración',
     'url': '',
-    'title': 'Menu 1.1',
     'caret': 'true',
     'submenu': [{
       'url': '',
-      'title': 'Menu 2.1',
-      'caret': 'true',
-      'submenu': [{
-        'url': '',
-        'title': 'Menu 3.1',
-      },{
-        'url': '',
-        'title': 'Menu 3.2'
-      }]
-    },{
+      'title': 'Supervisores',
+    },
+    {
       'url': '',
-      'title': 'Menu 2.2'
-    },{
+      'title': 'Departamentos',
+    },
+    {
       'url': '',
-      'title': 'Menu 2.3'
-    }]
-  },{
-    'url': '',
-    'title': 'Menu 1.2'
-  },{
-    'url': '',
-    'title': 'Menu 1.3'
-  }]
-}];
+      'title': 'Procesos',
+    }],
+  },
+];
 
 export default pageMenus;

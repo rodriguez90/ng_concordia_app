@@ -1,4 +1,32 @@
-var pageSettings = {
+export interface PageSettings {
+  pageSidebarMinified: boolean;
+  pageContentFullHeight: boolean;
+  pageContentFullWidth: boolean;
+  pageContentInverseMode: boolean;
+  pageWithFooter: boolean;
+  pageWithoutSidebar: boolean;
+  pageSidebarRight: boolean;
+  pageSidebarRightCollapsed: boolean;
+  pageSidebarTwo: boolean;
+  pageSidebarWide: boolean;
+  pageSidebarTransparent: boolean;
+  pageSidebarLight: boolean;
+  pageTopMenu: boolean;
+  pageEmpty: boolean;
+  pageBodyWhite: boolean;
+  pageMegaMenu: boolean;
+  pageLanguageBar: boolean;
+  pageMobileSidebarToggled: boolean;
+  pageMobileSidebarFirstClicked: boolean;
+  pageMobileSidebarRightToggled: boolean;
+  pageMobileSidebarRightFirstClicked: boolean;
+  pageMobileTopMenuToggled: boolean;
+  pageMobileMegaMenuToggled: boolean;
+  pageMobileRightSidebarToggled: boolean;
+  pageMobileRightSidebarFirstClicked: boolean;
+}
+
+const pageSettings: PageSettings = {
   pageSidebarMinified: false,
   pageContentFullHeight: false,
   pageContentFullWidth: false,
@@ -12,7 +40,7 @@ var pageSettings = {
   pageSidebarTransparent: false,
   pageSidebarLight: false,
   pageTopMenu: false,
-  pageEmpty: false,
+  pageEmpty: true,
   pageBodyWhite: false,
   pageMegaMenu: false,
   pageLanguageBar: false,
@@ -21,7 +49,9 @@ var pageSettings = {
   pageMobileSidebarRightToggled: false,
   pageMobileSidebarRightFirstClicked: false,
   pageMobileTopMenuToggled: false,
-  pageMobileMegaMenuToggled: false
+  pageMobileMegaMenuToggled: false,
+  pageMobileRightSidebarToggled: false,
+  pageMobileRightSidebarFirstClicked: false
 };
 
 

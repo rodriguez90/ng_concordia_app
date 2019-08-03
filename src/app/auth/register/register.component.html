@@ -1,0 +1,78 @@
+<!-- begin register -->
+<div class="register register-with-news-feed">
+    <!-- begin news-feed -->
+    <div class="news-feed">
+        <div class="news-image" style="background-image: url(../../../assets/img/concordia/naran.jpg)"></div>
+        <div class="news-caption">
+            <h4 class="caption-title"><b>GAD Municipal</b> Concordia</h4>
+            <p>
+                Estamos comprometidos con el desarollo del cantón, buscando la excelencia en la gestión publica municipal, para satisfacer las
+                necesidades de la comunidad con transparencia, equidad y participación cidudadana.
+            </p>
+        </div>
+    </div>
+    <!-- end news-feed -->
+    <!-- begin right-content -->
+    <div class="right-content">
+        <!-- begin register-header -->
+        <h1 class="register-header">
+            Registro
+            <small>Sea parte de la plataforma digital del GAD Municipal.</small>
+        </h1>
+        <!-- end register-header -->
+        <!-- begin register[(ngModel)]-content -->
+        <div class="register-content">
+            <form [formGroup]="registerForm" (keyup.enter)="onRegister();">
+                <label class="control-label">Nombre <span class="text-danger">*</span></label>
+                <div class="row row-space-10">
+                    <div class="col-md-6 m-b-15">
+                        <input type="text" class="form-control" placeholder="Primer Nombre" formControlName="firstName" required />
+                    </div>
+                    <div class="col-md-6 m-b-15">
+                        <input type="text" class="form-control" placeholder="Primer Apellido" formControlName="lastName" required />
+                    </div>
+                </div>
+                <label class="control-label">Correo Electrónico<span class="text-danger">*</span></label>
+                <div class="row m-b-15">
+                    <div class="col-md-12">
+                        <input type="text" class="form-control" placeholder="Correo Electrónico" formControlName="email" required />
+                    </div>
+                </div>
+                <label class="control-label">Confirme el Correo Electrónico<span class="text-danger">*</span></label>
+                <div class="row m-b-15">
+                    <div class="col-md-12">
+                        <input type="text" class="form-control" placeholder="Confirme el Correo Electrónico" formControlName="emailConfirmation" required />
+                    </div>
+                </div>
+                <label class="control-label">Contraseña<span class="text-danger">*</span></label>
+                <div class="row m-b-15">
+                    <div class="col-md-12">
+                        <input type="password" class="form-control" placeholder="Contraseña" formControlName="password"  required />
+                    </div>
+                </div>
+                <div class="checkbox checkbox-css m-b-30">
+                    <div class="checkbox checkbox-css m-b-30">
+                        <input type="checkbox" id="agreement_checkbox" value="">
+                        <label for="agreement_checkbox">
+                            Al registrarce, usted debe estar de acuerdo con nuestros<a href="javascript:;">Términos</a> y debe leer nuestras <a href="javascript:;">Política de Datos</a>.
+                        </label>
+                    </div>
+                </div>
+                <div class="register-buttons">
+                    <button [disabled]="registerForm.invalid" (click)="onRegister()" class="btn btn-primary btn-block btn-lg">Registrarme</button>
+                </div>
+                <div class="m-t-20 m-b-40 p-b-40 text-inverse">
+                    Ya tienes una cuenta? Click <a [routerLink]="['/login']"
+                                               routerLinkActive="router-link-active" >aquí</a> para entrar.
+                </div>
+                <hr />
+                <p class="text-center">
+                    &copy; GAD Municipal La Concordia 2019
+                </p>
+            </form>
+        </div>
+        <!-- end register-content -->
+    </div>
+    <!-- end right-content -->
+</div>
+<!-- end register -->

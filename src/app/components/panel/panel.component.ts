@@ -7,7 +7,7 @@ import { Component, ViewChild, AfterViewInit } 		 from '@angular/core';
 })
 
 export class PanelComponent implements AfterViewInit {
-  @ViewChild('panelFooter') panelFooter;
+  @ViewChild('panelFooter', {static: false}) panelFooter;
   expand = false;
   reload = false;
   collapse = false;
