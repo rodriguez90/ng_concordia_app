@@ -35,7 +35,7 @@
     "angular2-fullcalendar": "^1.0.19",
     "bootstrap-social": "^5.1.1",
     "calendar-utils": "^0.3.1",
-    "chart.js": "^2.7.1",
+    "chart.js": "^2.9.4",
     "core-js": "^3.1.4",
     "crypto-js": "^3.1.9-1",
     "date-fns": "1.29.0",
